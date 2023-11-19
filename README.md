@@ -21,7 +21,6 @@ formに任意のID、input要素にjs-input-fieldのクラスを付与してく�
     <input type="text" id="input1" class="js-input-field" />
 	入力率<div class="js-step-progress-value"></div>％
 </form>
-
 ```
 
 ## css
@@ -34,7 +33,6 @@ formに任意のID、input要素にjs-input-fieldのクラスを付与してく�
 
 ```
 $('#form').inputProgressController();
-
 ```
 
 
@@ -53,7 +51,6 @@ $('#form').inputProgressController({
 	fieldOkColor: "#F8E58C", // 入力OK時の入力項目の背景色をカスタム
 	fieldErrorColor: "#DDEEFF" // 空入力時の入力項目の背景色をカスタム
 });      
-
 ```
 
 # トリガー関数
