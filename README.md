@@ -29,7 +29,7 @@ formに任意のID、input要素にjs-input-fieldのクラスを付与してく�
 
 ## javascript
 
-フォームidを指定して起動してください。クラスでも動きますが推奨しません。
+任意のフォームidを指定して起動してください。クラスでも動きますが推奨しません。
 
 ```
 $('#form').inputProgressController();
@@ -62,20 +62,22 @@ $('#form').inputProgressController({
 
 リアルタイムバリデーションなど、独自の処理と連携できるよう、任意で呼び出せるトリガー関数を用意しています。
 - formValidateRun  
-現在のフォーム全体の入力状態をチェックし、入力率を更新します。フォームを初期化する際や、特定の処理の後に全体状態を確認できます。
+現在のフォーム全体の入力状態をチェックし、入力率を更新します。  
+フォームを初期化する際や、特定の処理の後に全体状態を確認できます。
 ```
 $('#form').inputProgressController('formValidateRun');
 ```
 - progressUpdate  
-入力率を更新します。formValidateRunとは異なり、入力空チェックを行わず、現在のフォーム状態で入力率を更新します。
+入力率を更新します。  
+formValidateRunとは異なり、入力空チェックを行わず、現在のフォーム状態で入力率を更新します。
 ```
 $('#form').inputProgressController('progressUpdate');
 ```
 - fieldValidation  
 任意のIDの入力項目で空チェックを行います。  
-また、特定の処理（空欄以外のバリデーションなど）で入力状態を任意に操作したい場合、第３引数にtrueで入力ＯＫ、falseで入力ＮＧの状態にできます。  
+また、特定の処理（空欄以外のバリデーションなど）で入力状態を任意に操作したい場合、第3引数にtrueで入力ＯＫ、falseで入力ＮＧの状態にできます。  
 
 例：入力されている状態でもＮＧにしたい
 ```
-$('#form').inputProgressController('fieldValidation', $jq(`#input1`), $("#form"), false);
+$('#form').inputProgressController('fieldValidation', $(`#input1`), $("#form"), false);
 ```
