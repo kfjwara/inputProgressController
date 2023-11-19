@@ -2,8 +2,8 @@
 フォームの入力進捗をサポートするjQueryプラグインです。
 
 # 主な機能
-・入力項目が空かどうかリアルタイムでチェックします。
-・フォーム内の入力項目数に応じた進捗率を表示できます。
+- 入力項目が空かどうかリアルタイムでバリデーションチェックします。
+- フォーム内の入力項目数に応じた進捗率を表示できます。
 
 # セットアップ
 1. jQuery3.6以上のバージョンを読み込みます。
@@ -13,7 +13,7 @@
 
 ## HTML
 
-formに任意のID、input要素にjs-input-fieldのクラスを付与してください。
+formに任意のID、input要素にjs-input-fieldのクラスを付与してください。  
 入力率はjs-step-progress-valueのクラス要素に更新されます。
 
 ```
@@ -40,11 +40,16 @@ $('#form').inputProgressController();
 
 プラグイン動作のクラス名やカラーををカスタマイズできます。起動時に指定してください。
 
-fieldClass: バリデーションを適用するフィールドのクラス名（デフォルト: "js-input-field"）
-fieldOkClass: バリデーションを通過したフィールドに適用されるクラス名（デフォルト: "js-input-field--ok"）
-fieldErrorClass: バリデーションエラー時に適用されるクラス名（デフォルト: "js-input-field--error"）
-progressBarClass: 入力率のクラス名（デフォルト: "js-step-progress-bar"）※styleプロパティのwidthに値が反映されます。
-progressValueClass: 進捗値を表示するクラス名（デフォルト: "js-step-progress-value"）※入力率を文字列で出力します。
+- fieldClass
+    - バリデーションを適用するフィールドのクラス名（デフォルト: "js-input-field"）
+- fieldOkClass
+    - バリデーションを通過したフィールドに適用されるクラス名（デフォルト: "js-input-field--ok"）
+- fieldErrorClass
+    - バリデーションエラー時に適用されるクラス名（デフォルト: "js-input-field--error"）
+- progressBarClass
+    - 入力率のクラス名（デフォルト: "js-step-progress-bar"）※styleプロパティのwidthに値が反映されます。
+- progressValueClass
+    - 進捗値を表示するクラス名（デフォルト: "js-step-progress-value"）※入力率を文字列で出力します。
 
 ```
 $('#form').inputProgressController({
