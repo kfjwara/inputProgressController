@@ -61,20 +61,19 @@ $('#form').inputProgressController({
 # トリガー関数
 
 リアルタイムバリデーションなど、独自の処理と連携できるよう、任意で呼び出せるトリガー関数を用意しています。
-
-formValidateRun
+- formValidateRun  
 現在のフォーム全体の入力状態をチェックし、入力率を更新します。フォームを初期化する際や、特定の処理の後に全体状態を確認できます。
 ```
 $('#form').inputProgressController('formValidateRun');
 ```
-progressUpdate
+- progressUpdate  
 入力率を更新します。formValidateRunとは異なり、入力空チェックを行わず、現在のフォーム状態で入力率を更新します。
 ```
 $('#form').inputProgressController('progressUpdate');
 ```
-fieldValidation
-任意のIDの入力項目で空チェックを行います。
-また、特定の処理（空欄以外のバリデーションなど）で入力状態を任意に操作したい場合、第３引数にtrueで入力ＯＫ。falseで入力ＮＧの状態にできます。
+- fieldValidation  
+任意のIDの入力項目で空チェックを行います。  
+また、特定の処理（空欄以外のバリデーションなど）で入力状態を任意に操作したい場合、第３引数にtrueで入力ＯＫ、falseで入力ＮＧの状態にできます。  
 
 例：入力されている状態でもＮＧにしたい
 ```
