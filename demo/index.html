@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input Progress Demo</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="utility.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../jquery.inputProgressController.js"></script>
+</head>
+<style>
+  input{
+    margin: 16px 0;
+  }
+  .container{
+    max-width: 600px;
+    padding:32px;
+  }
+  .progress-gauge{
+    min-width: 16px;
+    height: 16px;
+    transition: width 0.5s ease;
+    background-color: green;
+  }
+  .gauge-warp{
+    background-color: #ccc;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+</style>
+<body>
+<div class="container">
+
+<h1>Input Progress Demo</h1>
+<p>フォーム毎にクラス名などのカスタマイズが可能です。</p>
+
+<h2>Form1</h2>
+
+<form id="Form1">
+
+  <div class="u-d-flex">
+    <div>入力率</div>
+    <div><b class="js-step-progress-value">0</b>%</div>
+  </div>
+  <div class="gauge-warp">
+    <div class="progress-gauge js-step-progress-bar" role="progressbar" style="width: 0%;"></div>
+  </div>
+
+  <input type="text" class="js-input-field" />
+  <input type="text" class="js-input-field" />
+  <div>
+  <label for="test_radio">
+    <input name="radio" id="test_radio" type="radio" class="js-input-field" value="1">
+    <span>ラジオボタン１</span>
+  </label>
+  <label for="test_radio2">
+    <input name="radio" id="test_radio2" type="radio" class="js-input-field" value="2">
+    <span>ラジオボタン２</span>
+  </label>  
+  </div>
+  <label for="test_check">
+    <input id="test_check" type="checkbox" class="js-input-field" value="1">
+    <span>チェックボックス</span>
+  </label>
+</form>
+
+<h2>Form2</h2>
+<form id="Form2">
+
+  <div class="u-d-flex">
+    <div>入力率</div>
+    <div><b class="js-step-progress-value">0</b>%</div>
+  </div>
+  <div class="gauge-warp">
+    <div class="progress-gauge js-step-progress-bar" role="progressbar" style="width: 0%;"></div>
+  </div>
+
+  <input type="text" class="js-input-field" />
+  <input type="text" class="js-input-field" />
+  <div>
+  <label for="test_radio2_1">
+    <input name="radio2" id="test_radio2_1" type="radio" class="js-input-field" value="1">
+    <span>ラジオボタン１</span>
+  </label>
+  <label for="test_radio2_2">
+    <input name="radio2" id="test_radio2_2" type="radio" class="js-input-field" value="2">
+    <span>ラジオボタン２</span>
+  </label>  
+  </div>
+  <label for="test_check2">
+    <input id="test_check2" type="checkbox" class="js-input-field" value="1">
+    <span>チェックボックス</span>
+  </label>
+</form>
+
+</div>
+
+<script>
+  $(document).ready(function() {
+      $('#Form1').inputProgressController();
+      $('#Form2').inputProgressController({
+        fieldOkColor: "#F8E58C", // 薄い黄色に設定
+        fieldErrorColor: "#DDEEFF" // 薄い青色に設定
+    });      
+  });
+
+</script>
+</body>
+</html>
