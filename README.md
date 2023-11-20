@@ -35,6 +35,8 @@ formに任意のID、input要素にjs-input-fieldのクラスを付与してく�
 $('#form').inputProgressController();
 ```
 
+# デモ
+https://kfjwara.github.io/inputProgressController/demo/
 
 # オプション
 
